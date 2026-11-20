@@ -1,0 +1,6 @@
+{
+  "name": "BinaryTree Studio",
+  "description": "Interactive Data Structures and Algorithms educational studio dedicated exclusively to Binary Search Trees (BST), recursive insertion, and INORDER (LTR), PREORDER (TLR), and POSTORDER (LRT) traversals.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
