@@ -42,3 +42,10 @@ npm run build
    - **Build Command:** `npm run build`
    - **Output Directory:** `dist`
 4. Click **Deploy**.
+
+## Deploying to GitHub Pages
+
+The GitHub Actions workflow builds the app and deploys the `dist` output for the project URL `https://<owner>.github.io/Binary-Search-Tree/`.
+
+1. In the repository settings, open **Pages** and set the source to **GitHub Actions**.
+2. Push to the `main` branch or run the **Deploy to GitHub Pages** workflow manually from the **Actions** tab.
