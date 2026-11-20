@@ -10,10 +10,16 @@ export const BST_PRESETS: PresetExample[] = [
     description: 'Balanced 3-level BST whose INORDER (LTR) traversal produces ascending sorted order.',
   },
   {
+    id: 'bst-duplicates',
+    label: '50, 30, 50, 70',
+    input: '50, 30, 50, 70',
+    description: 'Shows duplicate keys retained in the right subtree using Left < Node <= Right.',
+  },
+  {
     id: 'bst-letters',
     label: 'M, B, Q, A, D, Z',
     input: 'M, B, Q, A, D, Z',
-    description: 'Alphabetic keys inserted recursively by lexicographic comparison (Left < Node < Right).',
+    description: 'Alphabetic keys inserted recursively by lexicographic comparison (Left < Node <= Right).',
   },
   {
     id: 'bst-skewed',

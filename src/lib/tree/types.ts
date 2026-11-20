@@ -14,7 +14,7 @@ export interface TreeNode {
 
 export interface BuildTraceStep {
   stepNumber: number;
-  action: 'create-leaf' | 'compare-left' | 'compare-right' | 'duplicate-skip';
+  action: 'create-leaf' | 'compare-left' | 'compare-right';
   summary: string;
   detail: string;
   nodeValue: string;

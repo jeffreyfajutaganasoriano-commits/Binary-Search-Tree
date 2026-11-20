@@ -45,7 +45,7 @@ export function InorderInputPanel({
         </div>
 
         <div className="text-xs font-semibold text-[#687C87] dark:text-[#8C9DA7]">
-          Invariant: Left &lt; Node &lt; Right
+          Invariant: Left &lt; Node &lt;= Right
         </div>
       </div>
 
@@ -135,7 +135,7 @@ export function InorderInputPanel({
           <strong className="font-bold text-[#A98273] dark:text-[#DEC3B3]">
             How Recursive BST Insertion Works:
           </strong>{' '}
-          Each key is compared recursively starting from the root—values smaller than the current node recurse into the <code className="font-mono">left</code> subtree, and values greater recurse into the <code className="font-mono">right</code> subtree. Because of this ordering invariant, an <strong className="font-semibold">INORDER (LTR)</strong> traversal always visits every key in sorted ascending order.
+          Each key is compared recursively starting from the root—values smaller than the current node recurse into the <code className="font-mono">left</code> subtree, while equal or greater values recurse into the <code className="font-mono">right</code> subtree. Duplicate keys are kept. Because of this ordering invariant, an <strong className="font-semibold">INORDER (LTR)</strong> traversal always visits every key in sorted ascending order.
         </p>
       </div>
     </section>

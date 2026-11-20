@@ -131,7 +131,7 @@ function compareValues(a: string, b: string, numeric: boolean): number {
 
 /**
  * Builds an ordered Binary Search Tree (BST) via pure recursive insertion:
- * Left Subtree < Node < Right Subtree.
+ * Left Subtree < Node <= Right Subtree.
  */
 export function buildBstTree(values: string[]): {
   root: TreeNode;
@@ -187,32 +187,19 @@ export function buildBstTree(values: string[]): {
       };
     }
 
-    if (cmp > 0) {
-      trace.push({
-        stepNumber: trace.length + 1,
-        action: 'compare-right',
-        summary: `"${value}" > "${current.value}" → recurse right`,
-        detail: `BST invariant: "${value}" is larger than "${current.value}", so recurse into the right subtree.`,
-        nodeValue: current.value,
-        nodeId: current.id,
-        depth,
-      });
-      return {
-        ...current,
-        right: insertRecursive(current.right, value, depth + 1),
-      };
-    }
-
     trace.push({
       stepNumber: trace.length + 1,
-      action: 'duplicate-skip',
-      summary: `Skip duplicate "${value}"`,
-      detail: `"${value}" equals existing node "${current.value}". Standard BSTs enforce unique keys, so duplicate insertion is skipped.`,
+      action: 'compare-right',
+      summary: `"${value}" >= "${current.value}" → recurse right`,
+      detail: `BST invariant: "${value}" is greater than or equal to "${current.value}", so recurse into the right subtree.`,
       nodeValue: current.value,
       nodeId: current.id,
       depth,
     });
-    return current;
+    return {
+      ...current,
+      right: insertRecursive(current.right, value, depth + 1),
+    };
   };
 
   let rawRoot: RawTreeNode | null = null;

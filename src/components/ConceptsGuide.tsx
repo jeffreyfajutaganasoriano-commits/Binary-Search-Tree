@@ -12,7 +12,7 @@ export function ConceptsGuide() {
           Binary Search Trees, Recursion &amp; Traversals
         </h1>
         <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[#5F5A57] dark:text-[#DFD6D0]">
-          A <strong className="font-bold">Binary Search Tree (BST)</strong> is an ordered hierarchical data structure where every node satisfies <code className="font-mono font-semibold text-[#A98273] dark:text-[#DEC3B3]">Left Subtree &lt; Node &lt; Right Subtree</code>.
+          A <strong className="font-bold">Binary Search Tree (BST)</strong> is an ordered hierarchical data structure where every node satisfies <code className="font-mono font-semibold text-[#A98273] dark:text-[#DEC3B3]">Left Subtree &lt; Node &lt;= Right Subtree</code>.
         </p>
       </div>
 
@@ -75,7 +75,7 @@ export function ConceptsGuide() {
               70
             </text>
             <text x="256" y="143" textAnchor="middle" fill="#687C87" className="font-mono text-[10px] font-semibold">
-              Leaf (&gt; 50)
+              Leaf (&gt;= 50)
             </text>
 
             <circle cx="62" cy="174" r="16" fill="#8C9DA7" stroke="#687C87" strokeWidth="2" />
@@ -94,11 +94,11 @@ export function ConceptsGuide() {
           {[
             {
               term: 'Root Node',
-              desc: 'The first key inserted into an empty BST (depth 0). All smaller keys route left; all larger keys route right.',
+              desc: 'The first key inserted into an empty BST (depth 0). All smaller keys route left; equal or larger keys route right.',
             },
             {
               term: 'BST Ordering Invariant',
-              desc: 'Every node guarantees all values in its left subtree are strictly less, and all values in its right subtree are strictly greater.',
+              desc: 'Every node guarantees all values in its left subtree are strictly less and all values in its right subtree are greater than or equal. Duplicate keys are kept on the right.',
             },
             {
               term: 'Leaf Node',
